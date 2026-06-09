@@ -340,6 +340,9 @@ function buildSkillItem(skill) {
 function renderBossBattleHero() {
   const bb = BOSS_BATTLE;
 
+  // Safety check: if the boss-hero-card isn't in the HTML, exit cleanly
+  if (!document.getElementById("bh-title")) return;
+
   // -- Title
   document.getElementById("bh-title").textContent   = bb.unit + " " + bb.name;
   document.getElementById("bh-date").textContent    = "📅 " + bb.dateDisplay;
@@ -675,11 +678,17 @@ function switchTest(type) {
    INIT — Run on page load
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-  renderBossBattleHero(); // Unit Boss Battle hero card (top of dashboard)
-  renderDashboard();      // Student dashboard (default view)
-  renderMissions();    // Missions tab (pre-rendered)
-  renderBadges();      // Badges tab (pre-rendered)
-  renderTeacher();     // Teacher dashboard (hidden until toggled)
-  renderBigTest("unit"); // Big test (default: unit test)
-  renderSkillTree();   // Skill tree
+  // Each render call is wrapped individually so one failure never blocks the rest
+  const run = (fn, label) => {
+    try { fn(); }
+    catch(e) { console.warn("Mission Readiness — render error in " + label + ":", e); }
+  };
+
+  run(renderBossBattleHero, "BossBattleHero");
+  run(renderDashboard,      "Dashboard");
+  run(renderMissions,       "Missions");
+  run(renderBadges,         "Badges");
+  run(renderTeacher,        "Teacher");
+  run(() => renderBigTest("unit"), "BigTest");
+  run(renderSkillTree,      "SkillTree");
 });
