@@ -62,6 +62,59 @@
         </div>
       </div>
 
+      <!-- ═══════════════════════════════════════════════════
+           UNIT BOSS BATTLE HERO CARD
+           Inserted after student hero card — most prominent element
+      ═══════════════════════════════════════════════════ -->
+      <div class="boss-hero-card" id="boss-hero-card">
+
+        <!-- Top row: title + countdown -->
+        <div class="bh-top">
+          <div class="bh-title-block">
+            <span class="bh-eyebrow">⚔️ UPCOMING</span>
+            <h2 class="bh-title" id="bh-title">UNIT 5 BOSS BATTLE</h2>
+            <span class="bh-date" id="bh-date">📅 June 12</span>
+          </div>
+          <div class="bh-countdown" id="bh-countdown">
+            <span class="bh-days" id="bh-days">—</span>
+            <span class="bh-days-label">DAYS LEFT</span>
+          </div>
+        </div>
+
+        <!-- Confidence badge -->
+        <div class="bh-confidence" id="bh-confidence">—</div>
+
+        <!-- Readiness meters row -->
+        <div class="bh-meters">
+
+          <!-- Current readiness -->
+          <div class="bh-meter-block">
+            <div class="bh-meter-labels">
+              <span class="bh-meter-name">Current Readiness</span>
+              <span class="bh-meter-pct" id="bh-current-pct">78%</span>
+            </div>
+            <div class="bh-track">
+              <div class="bh-fill bh-fill-current" id="bh-current-bar"></div>
+              <!-- Target marker line -->
+              <div class="bh-target-marker" id="bh-target-marker"></div>
+            </div>
+            <div class="bh-track-labels">
+              <span>0%</span>
+              <span class="bh-target-label" id="bh-target-label">🎯 Target: 85%</span>
+              <span>100%</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Recommended Training -->
+        <div class="bh-training">
+          <div class="bh-training-heading">🏋️ Recommended Training Before Battle</div>
+          <div class="bh-training-list" id="bh-training-list"></div>
+        </div>
+
+      </div><!-- /boss-hero-card -->
+
       <!-- Readiness Meter + Boss Battle -->
       <div class="two-col">
 
