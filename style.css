@@ -1,9 +1,9 @@
 /* ============================================================
-   MISSION READINESS — style.css
-   Mt. Vernon High School  |  Black · Gold · White theme
+   MISSION READINESS â€” style.css
+   Mt. Vernon High School  |  Black Â· Gold Â· White theme
    ============================================================ */
 
-/* ── CSS Variables ─────────────────────────────────────────── */
+/* â”€â”€ CSS Variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   --black:       #0a0a0a;
   --dark-gray:   #1a1a2e;
@@ -23,7 +23,7 @@
   --transition:  0.25s ease;
 }
 
-/* ── Reset & Base ───────────────────────────────────────────── */
+/* â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
 }
 
-/* ── Top Header ─────────────────────────────────────────────── */
+/* â”€â”€ Top Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .top-header {
   background: linear-gradient(135deg, var(--dark-gray) 0%, #0d1b2a 100%);
   border-bottom: 3px solid var(--gold);
@@ -96,13 +96,13 @@ body {
   border-color: var(--gold);
 }
 
-/* ── View / Tab Switching ───────────────────────────────────── */
+/* â”€â”€ View / Tab Switching â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .view           { display: none; max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
 .view.active-view { display: block; }
 .tab-content    { display: none; }
 .tab-content.active-tab { display: block; }
 
-/* ── Tab Nav ────────────────────────────────────────────────── */
+/* â”€â”€ Tab Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .tab-nav {
   display: flex;
   gap: 6px;
@@ -129,7 +129,7 @@ body {
   color: var(--black);
 }
 
-/* ── Card ───────────────────────────────────────────────────── */
+/* â”€â”€ Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .card {
   background: var(--card-bg);
   border: 1px solid rgba(245,197,24,0.2);
@@ -152,7 +152,7 @@ body {
   margin-bottom: 18px;
 }
 
-/* ── Hero Card ──────────────────────────────────────────────── */
+/* â”€â”€ Hero Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hero-card {
   background: linear-gradient(135deg, #0d1b2a 0%, #1a1a2e 60%, #0d1b2a 100%);
   border: 2px solid var(--gold);
@@ -220,7 +220,7 @@ body {
   color: var(--gold);
 }
 
-/* ── Two-Column Layout ──────────────────────────────────────── */
+/* â”€â”€ Two-Column Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -229,7 +229,7 @@ body {
 }
 @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
 
-/* ── Readiness Card ─────────────────────────────────────────── */
+/* â”€â”€ Readiness Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .readiness-card { text-align: center; }
 
 .big-percent {
@@ -247,7 +247,7 @@ body {
   color: var(--off-white);
 }
 
-/* ── Boss Battle Card ───────────────────────────────────────── */
+/* â”€â”€ Boss Battle Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .boss-card { display: flex; flex-direction: column; gap: 10px; }
 
 .boss-name {
@@ -280,7 +280,7 @@ body {
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
-/* ── Meter / Progress Bar ───────────────────────────────────── */
+/* â”€â”€ Meter / Progress Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .meter-track {
   width: 100%;
   background: rgba(255,255,255,0.1);
@@ -303,7 +303,7 @@ body {
 .meter-fill.almost     { background: linear-gradient(90deg, var(--gold-dark), var(--gold)); }
 .meter-fill.needs-work { background: linear-gradient(90deg, #c0392b, var(--red)); }
 
-/* ── Next Mission Card ──────────────────────────────────────── */
+/* â”€â”€ Next Mission Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .next-mission-card {}
 
 .next-mission-inner {
@@ -327,7 +327,7 @@ body {
   margin-top: 2px;
 }
 
-/* ── Stat Row ───────────────────────────────────────────────── */
+/* â”€â”€ Stat Row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .stat-row {
   display: flex;
   gap: 14px;
@@ -359,7 +359,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ── Skill List ─────────────────────────────────────────────── */
+/* â”€â”€ Skill List â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .skill-list { display: flex; flex-direction: column; gap: 16px; }
 
 .skill-item {
@@ -420,7 +420,7 @@ body {
   width: 0;
 }
 
-/* ── Mission List ───────────────────────────────────────────── */
+/* â”€â”€ Mission List â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mission-list { display: flex; flex-direction: column; gap: 14px; }
 
 .mission-item {
@@ -466,7 +466,7 @@ body {
 .tag-locked  { background: rgba(150,150,150,0.2); color: #aaa; border: 1px solid #555; }
 .tag-done    { background: rgba(57,211,83,0.25); color: var(--green); border: 1px solid var(--green); }
 
-/* ── Badge Grid ─────────────────────────────────────────────── */
+/* â”€â”€ Badge Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .badge-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -519,7 +519,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ── Test Switcher ──────────────────────────────────────────── */
+/* â”€â”€ Test Switcher â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .test-switcher {
   display: flex;
   gap: 8px;
@@ -544,7 +544,7 @@ body {
   border-color: var(--gold);
 }
 
-/* ── Teacher Dashboard ──────────────────────────────────────── */
+/* â”€â”€ Teacher Dashboard â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .teacher-header-card {}
 
 .privacy-note {
@@ -613,7 +613,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
+/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .app-footer {
   text-align: center;
   padding: 20px;
@@ -622,7 +622,7 @@ body {
   border-top: 1px solid #1e1e1e;
 }
 
-/* ── Responsive Fine-tuning ─────────────────────────────────── */
+/* â”€â”€ Responsive Fine-tuning â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 480px) {
   .logo-text  { font-size: 1.1rem; }
   .big-percent { font-size: 3rem; }
@@ -631,7 +631,306 @@ body {
   .badge-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
 }
 
-/* ── Projector Mode (large screens) ────────────────────────── */
+/* ============================================================
+   UNIT BOSS BATTLE HERO CARD
+   ============================================================ */
+
+/* Pulse-glow keyframe for the card border */
+@keyframes bossGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(245,197,24,0.35), 0 0 40px rgba(245,197,24,0.12), var(--shadow); }
+  50%       { box-shadow: 0 0 32px rgba(245,197,24,0.65), 0 0 70px rgba(245,197,24,0.22), var(--shadow); }
+}
+
+/* Fill-bar shimmer sweep */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.boss-hero-card {
+  background: linear-gradient(145deg, #0a0f1e 0%, #0d1b2a 45%, #100a00 100%);
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px 28px 24px;
+  margin-bottom: 24px;
+  animation: bossGlow 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dragon-scale texture overlay */
+.boss-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    60deg,
+    transparent,
+    transparent 18px,
+    rgba(245,197,24,0.025) 18px,
+    rgba(245,197,24,0.025) 19px
+  );
+  pointer-events: none;
+}
+
+/* â”€â”€ Top row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.bh-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.bh-title-block { display: flex; flex-direction: column; gap: 4px; }
+
+.bh-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+.bh-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 16px rgba(245,197,24,0.5);
+  line-height: 1.1;
+}
+
+.bh-date {
+  font-size: 0.95rem;
+  color: var(--off-white);
+  font-style: italic;
+}
+
+/* â”€â”€ Countdown bubble â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.bh-countdown {
+  background: rgba(0,0,0,0.55);
+  border: 2px solid var(--gold-dark);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  text-align: center;
+  min-width: 88px;
+  flex-shrink: 0;
+}
+
+.bh-days {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.bh-days-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--off-white);
+  margin-top: 4px;
+}
+
+/* â”€â”€ Confidence badge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.bh-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  border: 2px solid;
+}
+.bh-conf-ready  { background: rgba(57,211,83,0.15);  color: #39d353; border-color: #39d353; }
+.bh-conf-almost { background: rgba(245,197,24,0.15); color: var(--gold); border-color: var(--gold); }
+.bh-conf-needs  { background: rgba(229,83,83,0.15);  color: #e55353; border-color: #e55353; }
+
+/* â”€â”€ Meter section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.bh-meters { margin-bottom: 22px; }
+
+.bh-meter-block {}
+
+.bh-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.bh-meter-name {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--off-white);
+  font-weight: 600;
+}
+
+.bh-meter-pct {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+/* The track is relative so the target marker can sit on top */
+.bh-track {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 50px;
+  overflow: visible; /* allow marker to poke above */
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.bh-fill {
+  height: 100%;
+  border-radius: 50px;
+  width: 0;
+  transition: width 1.1s cubic-bezier(0.4,0,0.2,1);
+  background: linear-gradient(90deg, var(--gold-dark) 0%, var(--gold) 60%, var(--gold-light) 100%);
+  background-size: 200% auto;
+  animation: shimmer 2.5s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shimmer shine layer */
+.bh-fill::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.25) 50%,
+    transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+  border-radius: 50px;
+}
+
+/* Target readiness marker â€” vertical line + flag */
+.bh-target-marker {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  width: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: left 1.1s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 0 8px rgba(255,255,255,0.7);
+}
+.bh-target-marker::before {
+  content: "ðŸŽ¯";
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+}
+
+.bh-track-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 6px;
+  padding: 0 2px;
+}
+
+.bh-target-label {
+  color: var(--off-white);
+  font-weight: 600;
+}
+
+/* â”€â”€ Recommended Training â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.bh-training {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(245,197,24,0.2);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.bh-training-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.bh-training-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bh-train-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bh-train-rank {
+  width: 26px; height: 26px;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.bh-train-info { flex: 1; }
+
+.bh-train-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.bh-train-meta {
+  font-size: 0.75rem;
+  color: var(--off-white);
+  margin-top: 2px;
+}
+
+.bh-train-bar-wrap {
+  width: 80px;
+  flex-shrink: 0;
+}
+.bh-train-track {
+  background: rgba(255,255,255,0.08);
+  border-radius: 50px;
+  height: 8px;
+  overflow: hidden;
+}
+.bh-train-fill {
+  height: 100%;
+  border-radius: 50px;
+  transition: width 1.2s ease;
+  width: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .bh-title    { font-size: 1.4rem; }
+  .bh-days     { font-size: 2.2rem; }
+  .bh-meter-pct { font-size: 1.5rem; }
+  .bh-train-bar-wrap { display: none; }
+}
+
+/* â”€â”€ Projector Mode (large screens) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (min-width: 1400px) {
   body { font-size: 18px; }
   .big-percent { font-size: 5rem; }
