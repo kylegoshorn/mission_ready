@@ -187,6 +187,21 @@ const BIG_TEST = {
 };
 
 
+// ── Unit Boss Battle Hero Card ────────────────────────────────
+// Edit this object to change the boss battle card on the dashboard.
+const BOSS_BATTLE = {
+  unit:           "Unit 5",           // Unit label shown in the title
+  name:           "Boss Battle",      // Name shown after the unit label
+  date:           "2026-06-12",       // ISO date string — used for countdown
+  dateDisplay:    "June 12",          // Human-readable date shown on card
+  currentPct:     78,                 // Student's current readiness (0–100)
+  targetPct:      85,                 // Target readiness to feel "ready"
+  // Confidence thresholds (auto-calculated — you only need to edit these if you
+  // want to change what counts as Ready / Almost Ready / Needs Training):
+  readyThreshold:  85,                // >= this → 🟢 Ready
+  almostThreshold: 70,                // >= this → 🟡 Almost Ready  (below → 🔴)
+};
+
 // ── Recommended Next Mission ──────────────────────────────────
 // Points to the first "available" mission automatically (see renderDashboard),
 // but you can override here with a specific mission name if you prefer:
@@ -316,6 +331,97 @@ function buildSkillItem(skill) {
       </div>
     </div>`;
   return div;
+}
+
+
+/* ============================================================
+   RENDER: UNIT BOSS BATTLE HERO CARD
+   ============================================================ */
+function renderBossBattleHero() {
+  const bb = BOSS_BATTLE;
+
+  // -- Title
+  document.getElementById("bh-title").textContent   = bb.unit + " " + bb.name;
+  document.getElementById("bh-date").textContent    = "📅 " + bb.dateDisplay;
+
+  // -- Countdown (days until boss battle from today)
+  const today      = new Date();
+  today.setHours(0, 0, 0, 0);
+  const battleDate = new Date(bb.date + "T00:00:00");
+  const msPerDay   = 1000 * 60 * 60 * 24;
+  const daysLeft   = Math.ceil((battleDate - today) / msPerDay);
+  const daysEl     = document.getElementById("bh-days");
+  if (daysLeft > 0) {
+    daysEl.textContent = daysLeft;
+  } else if (daysLeft === 0) {
+    daysEl.textContent = "TODAY";
+    daysEl.style.fontSize = "1.4rem";
+  } else {
+    daysEl.textContent = "DONE";
+    daysEl.style.fontSize = "1.4rem";
+  }
+
+  // -- Confidence level (auto-calculated from currentPct vs thresholds)
+  const confEl = document.getElementById("bh-confidence");
+  if (bb.currentPct >= bb.readyThreshold) {
+    confEl.textContent  = "🟢 Ready — You're prepared for battle!";
+    confEl.className    = "bh-confidence bh-conf-ready";
+  } else if (bb.currentPct >= bb.almostThreshold) {
+    confEl.textContent  = "🟡 Almost Ready — Keep training!";
+    confEl.className    = "bh-confidence bh-conf-almost";
+  } else {
+    confEl.textContent  = "🔴 Needs More Training — Let's get to work!";
+    confEl.className    = "bh-confidence bh-conf-needs";
+  }
+
+  // -- Current readiness bar
+  document.getElementById("bh-current-pct").textContent = bb.currentPct + "%";
+  const currentBar = document.getElementById("bh-current-bar");
+  setTimeout(() => { currentBar.style.width = bb.currentPct + "%"; }, 100);
+
+  // -- Target marker position (positioned as % of track width)
+  const marker = document.getElementById("bh-target-marker");
+  setTimeout(() => { marker.style.left = "calc(" + bb.targetPct + "% - 1.5px)"; }, 100);
+  document.getElementById("bh-target-label").textContent = "🎯 Target: " + bb.targetPct + "%";
+
+  // -- Recommended Training: pick bottom 3 skills sorted by pct ascending
+  // Only includes skills that haven't been mastered (below targetPct)
+  const trainingSkills = [...SKILLS]
+    .filter(s => s.pct < bb.targetPct)   // only skills below target
+    .sort((a, b) => a.pct - b.pct)       // weakest first
+    .slice(0, 3);                         // top 3 to work on
+
+  // If all skills are above target, show top 3 lowest anyway
+  const displaySkills = trainingSkills.length > 0
+    ? trainingSkills
+    : [...SKILLS].sort((a, b) => a.pct - b.pct).slice(0, 3);
+
+  const trainingList = document.getElementById("bh-training-list");
+  trainingList.innerHTML = "";
+  displaySkills.forEach((skill, i) => {
+    const sc   = statusClass(skill.pct);
+    const item = document.createElement("div");
+    item.className = "bh-train-item";
+    item.innerHTML = `
+      <div class="bh-train-rank">${i + 1}</div>
+      <div class="bh-train-info">
+        <div class="bh-train-name">${skill.icon} ${skill.name}</div>
+        <div class="bh-train-meta">${skill.pct}% mastery · ${statusLabel(skill.pct)}</div>
+      </div>
+      <div class="bh-train-bar-wrap">
+        <div class="bh-train-track">
+          <div class="bh-train-fill meter-fill ${sc}" data-pct="${skill.pct}"></div>
+        </div>
+      </div>`;
+    trainingList.appendChild(item);
+  });
+
+  // Animate training mini-bars
+  setTimeout(() => {
+    trainingList.querySelectorAll(".bh-train-fill[data-pct]").forEach(el => {
+      el.style.width = el.getAttribute("data-pct") + "%";
+    });
+  }, 200);
 }
 
 
@@ -569,7 +675,8 @@ function switchTest(type) {
    INIT — Run on page load
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
-  renderDashboard();   // Student dashboard (default view)
+  renderBossBattleHero(); // Unit Boss Battle hero card (top of dashboard)
+  renderDashboard();      // Student dashboard (default view)
   renderMissions();    // Missions tab (pre-rendered)
   renderBadges();      // Badges tab (pre-rendered)
   renderTeacher();     // Teacher dashboard (hidden until toggled)
